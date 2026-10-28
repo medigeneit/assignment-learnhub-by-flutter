@@ -38,11 +38,18 @@ lib/
 
 ## ২. চালানোর নিয়ম
 
-1. API সার্ভার পরীক্ষক চালু করে রাখবেন। ব্রাউজারে http://localhost:3000/courses খুলে দেখুন ডাটা আসছে কিনা।
+1. API চালু করুন। API আলাদা repo-তে আছে: https://github.com/medigeneit/assignment-learnhub-api-by-json-server
+   ```bash
+   git clone https://github.com/medigeneit/assignment-learnhub-api-by-json-server.git
+   cd assignment-learnhub-api-by-json-server
+   npm install
+   npm start
+   ```
+   (Node.js 18 বা তার বেশি লাগবে।) টার্মিনালটা খোলা রাখুন, তারপর ব্রাউজারে http://localhost:3000/courses খুলে দেখুন ডাটা আসছে কিনা।
 2. `lib/config/api_config.dart` খুলে দেখুন `baseUrl` আপনার ডিভাইসের জন্য ঠিক আছে কিনা:
    - Android emulator: `http://10.0.2.2:3000` (আগে থেকেই দেওয়া)
    - iOS simulator: `http://localhost:3000`
-   - আসল ফোন: পরীক্ষক যে IP বলবেন, যেমন `http://192.168.0.105:3000`
+   - আসল ফোন: যে কম্পিউটারে API চলছে তার IP, যেমন `http://192.168.0.105:3000` (ফোন আর কম্পিউটার একই Wi-Fi-তে থাকতে হবে)
 3. টার্মিনালে:
    ```bash
    flutter pub get
@@ -132,7 +139,7 @@ json-server-এর দুটো সুবিধা মনে রাখুন:
 
 ## ৭. নিয়ম
 
-- সময়: **১.৫ – ২ ঘণ্টা**
+- সময়: **১ ঘণ্টা ২০ মিনিট**
 - Google, StackOverflow আর অফিসিয়াল ডকুমেন্টেশন (docs.flutter.dev, api.flutter.dev) ব্যবহার করতে পারবেন।
 - প্রতিটা কাজ শেষে আলাদা git commit করবেন:
   - `feat: style course card`
